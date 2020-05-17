@@ -1,0 +1,16 @@
+/* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+
+I changed the rules on
+{
+	"rules": {
+		"ingredients": {
+   	 ".read": true,
+   	 ".write": true,
+		},
+		"orders": {
+ 	   ".read": "auth != null",
+  	  ".write": "auth != null",
+		}
+  }
+}
+

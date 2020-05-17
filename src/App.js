@@ -63,7 +63,6 @@ const app = (props) => {
   }
   return (
     <div>
-      CHANGES
       <Layout>
         {/* You could render a Spinner on fallback. */}
         <Suspense fallback={<p>Loading...</p>}>{routes}</Suspense>

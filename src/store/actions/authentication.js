@@ -67,7 +67,7 @@ export const authentication = (email, password, isSignup) => {
     // SERCH FOR: "Sign up with email / password" --> Endpoint.
     // "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]"
     let url =
-      "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=YOU_FIREBASE_KEY";
+      "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=YOUR_FIREBASE_KEY";
 
     // SIGNIN USER:
     // URL FROM: https://firebase.google.com/docs/reference/rest/auth
@@ -75,7 +75,7 @@ export const authentication = (email, password, isSignup) => {
     // https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]
     if (!isSignup) {
       url =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=YOU_FIREBASE_KEY";
+        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=YOUR_FIREBASE_KEY";
     }
 
     axios

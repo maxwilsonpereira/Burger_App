@@ -52,7 +52,8 @@ export const checkAuthTimeout = (expirationTime) => {
 
 // MUST DO:
 // 1- Inside the Firebase App-Project, go to Authentication:
-// Click on "E-mail/senha" and make it ACTIVE.
+// On Sign in Method: Click on "E-mail/senha" and make it ACTIVE.
+// API_KEY: Firebase/YourProject/"GEAR-ICON"_Project Configuration: There you will find it!
 export const authentication = (email, password, isSignup) => {
   return (dispatch) => {
     dispatch(authStart());
@@ -65,9 +66,8 @@ export const authentication = (email, password, isSignup) => {
     // URL FROM: https://firebase.google.com/docs/reference/rest/auth
     // SERCH FOR: "Sign up with email / password" --> Endpoint.
     // "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY]"
-    // API_KEY: Firebase/YourProject/"GEAR-ICON"_Project Configuration: There you will find it!
     let url =
-      "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDW97M9KcWruu1NMl0Ebz7CgY1ayO6Q9hU";
+      "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=YOU_FIREBASE_KEY";
 
     // SIGNIN USER:
     // URL FROM: https://firebase.google.com/docs/reference/rest/auth
@@ -75,7 +75,7 @@ export const authentication = (email, password, isSignup) => {
     // https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]
     if (!isSignup) {
       url =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDW97M9KcWruu1NMl0Ebz7CgY1ayO6Q9hU";
+        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=YOU_FIREBASE_KEY";
     }
 
     axios
